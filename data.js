@@ -1,0 +1,28 @@
+var app = app || {}
+app.data = [
+"Angola ",
+"Afghanistan",
+"Albania ",
+"Cameroon ",
+"Canada",
+"Cayman Is. ",
+"Central African Republic ",
+"Chad ",
+"Guyana",
+"Haiti ",
+"Honduras ",
+"Hongkong ",
+"Hungary ",
+"Malaysia ",
+"Maldives ",
+"Mali ",
+"Malta ",
+"Mariana Is ",
+"Venezuela ",
+"Vietnam",
+"Yemen ",
+"Yugoslavia",
+"Zimbabwe",
+"Zaire",
+"Zambia"
+] 

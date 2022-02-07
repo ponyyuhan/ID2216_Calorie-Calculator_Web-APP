@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
+
+    <style>
+
+
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+ 
+    </style>
+    <script>
+      function centervertical(ele) {
+	
+	var eleH = ele.offsetHeight;
+	var height = client().height;
+	var top = (height - eleH) / 2;
+	ele.style.top = top + 'px';
+
+}
+      </script>
+  </head>
+
+
+<body class="w3-theme-l5" onload="centervertical(document.getElementsByClassName("body"))">
+        <form>
+            <span class="w3-input w3-round w3-theme-d3 w3-border"><h1>Profile</h1></span>
+        </form>
+        <div class="" style="text-align: center">
+    <img src="head.png" class="w3-round" alt="person image" width="250px" height="200px" style="border-radius: 50%; border: 5px solid #4ab6e0 !important; margin-top: 16px;">
+        </div>
+  <div class="container">
+    <div>
+    </div>
+        <div class="links-container" onload="getWeight()">
+        <a id="weight" href="index.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">60kg   175cm</a>
+        <a href="friendszone.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Friends Zone</a>
+        <a href="bmi.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">BMI</a>
+        <a href="addcontacts.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Contacts</a>
+        <a href="setting.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Settings</a>
+        </div>
+  </div>
+  <footer>
+    <span class="w3-input w3-round w3-theme-d3 w3-border" style="text-align: center">
+        <a class="w3-margin-bottom" href=search-overall.html target="_blank">
+          <img src="search1.png"  width="50" height="50">
+        </a> 
+        <a class="w3-margin-bottom" href=record.html target="_blank">
+          <img src="search2.png"  width="50" height="50">
+        </a> 
+        <a class="w3-margin-bottom" href=profile.html target="_blank">
+          <img src="search3.png"  width="50" height="50">
+        </a> 
+    </span>
+  </footer>
+  <script src="information.js"></script>
+</body>  </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+      .links-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    </style>
+  </head>
+
+  <body class="w3-theme-l5">
+    <div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Record</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+    <img src="https://www.w3schools.com/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+  </a>
+ </div>
+</div>
+
+
+    <div class="links-container">
+        <a href="#" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">MY CLIMBS</a>
+        <a href="https://frinedspace.w3spaces.com/drinkwater.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Drinking Water</a>
+        <a href="https://frinedspace.w3spaces.com/sport.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Sport</a>
+        <a href="https://frinedspace.w3spaces.com/sleeping.html" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Sleeping</a>
+    </div> 
+
+   <footer class="w3-container w3-theme-d5">
+  <footer>
+    <span class="w3-input w3-round w3-theme-d3 w3-border" style="text-align: center">
+        <a class="w3-margin-bottom" href=search-overall.html target="_blank">
+          <img src="search1.png"  width="50" height="50">
+        </a> 
+        <a class="w3-margin-bottom" href=record.html target="_blank">
+          <img src="search2.png"  width="50" height="50">
+        </a> 
+        <a class="w3-margin-bottom" href=profile.html target="_blank">
+          <img src="search3.png"  width="50" height="50">
+        </a> 
+    </span>
+  </footer>
+
+</footer>
+ 
+
+      
+</body>
+
+<script>
+// Accordion
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-theme-d1";
+  } else { 
+    x.className = x.className.replace("w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+</html> 

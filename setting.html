@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+    <style>
+
+    body {
+      background-image: url("1.png"); /* The image used for background */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover; /* Resize the background image to cover the entire container */
+    }
+
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+   
+    </style>
+    <script>
+      function centervertical(ele) {
+	
+	var eleH = ele.offsetHeight;
+	var height = client().height;
+	var top = (height - eleH) / 2;
+	ele.style.top = top + 'px';
+
+}
+      </script>
+  </head>
+
+
+<body class ="w3-theme-l5" onload="centervertical(document.getElementsByClassName("body"))">
+        <form>
+            <span class="w3-input w3-round w3-theme-d3 w3-border"><h1>Settings</h1></span>
+        </form>
+
+  <div class="container">
+        <h2 class="category-bar">Food Preference</h2>
+          <ul id="to-do-list"></ul>
+      <form id="what-to-do-form">
+        <input class="w3-input w3-round w3-theme-d3 w3-border" type = "text" name="newToDo" id="what-to-do"placeholder="Name of the food"></input>
+      </form>
+            <div class="links-container">
+            <button id="prefButton" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Add</a>
+            </div>
+  </div>
+  <div class="container">
+    <div>
+    </div>
+        <div class="links-container">
+        <button id="permission" class="w3-button w3-round w3-theme-d3 w3-border link" target="_blank">Visitor Permission
+          <img src="off.png" class="w3-round" id = "switch" width="60px" height="40px" float = "right">
+        </button>
+        </div>
+  </div>
+  <footer>
+    <span class="w3-input w3-round w3-theme-d3 w3-border" style="text-align: center">
+        <a class="w3-margin-bottom" href=search-overall.html target="_blank">
+          <img src="search1.png"  width="50" height="50">
+        </a> 
+        <a class="w3-margin-bottom" href=record.html target="_blank">
+          <img src="search2.png"  width="50" height="50">
+        </a> 
+        <a class="w3-margin-bottom" href=profile.html target="_blank">
+          <img src="search3.png"  width="50" height="50">
+        </a> 
+    </span>
+  </footer>
+    <script src="setting.js"></script>
+</body>  </html>

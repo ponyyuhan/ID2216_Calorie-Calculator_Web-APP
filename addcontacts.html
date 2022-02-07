@@ -1,0 +1,111 @@
+!doctype html
+html lang=en
+
+head
+	meta charset=UTF-8
+	meta name=viewport content=width=device-width, initial-scale=1.0
+	titleIndex Sidebar - luobotangtitle
+	link rel=stylesheet href=sidebar.css
+	  head
+    titlecalendartitle
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1
+    link rel=stylesheet href=httpswww.w3schools.comw3css4w3.css
+    link rel=stylesheet href=httpswww.w3schools.comlibw3-theme-blue-grey.css
+    link rel='stylesheet' href='httpsfonts.googleapis.comcssfamily=Open+Sans'
+    link rel=stylesheet href=httpscdnjs.cloudflare.comajaxlibsfont-awesome4.7.0cssfont-awesome.min.css
+    link rel=stylesheet href=httpsfrinedspace.w3spaces.comcalendar.css
+
+    style
+    html, body, h1, h2, h3, h4, h5 {font-family Open Sans, sans-serif}
+    .container {
+      width 100%;
+      height 100%;
+      padding-right 15px;
+      padding-left 15px;
+      margin-right auto;
+      margin-left auto;
+    }
+     .links-container {
+      display flex;
+      flex-direction column;
+      justify-content center;
+      align-items center;
+      gap 20px;
+    }
+    style
+head
+
+body class=w3-theme-l5
+ div class=w3-top
+ div class=w3-bar w3-theme-d2 w3-left-align w3-large
+  a class=w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2 href=javascriptvoid(0); onclick=openNav()i class=fa fa-barsia
+  a href=profile.html class=w3-bar-item w3-button w3-padding-large w3-theme-d4i class=fa fa-home w3-margin-rightiContactsa
+
+  a href=# class=w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2 title=My Account
+    img src=httpswww.w3schools.comw3imagesavatar2.png class=w3-circle style=height23px;width23px alt=AvatarAdd Frineds
+  a
+ div
+
+div
+
+
+	div id=item-container
+		ulul
+	div
+	
+ 
+
+	script src=sidebar.jsscript
+	script src=data.jsscript
+	script
+		var app = app  {}
+
+		app.ItemList = function (data) {
+			var list = []
+			var map = {}
+			var html
+
+			html = data.map(function (item) {
+				var i = item.lastIndexOf(' ')
+				var en = item.slice(0, i)
+				var cn = item.slice(i + 1)
+				var ch = en[0]
+				if (map[ch]) {
+					return 'li' + en + 'br' + cn + 'li'
+				} else {
+					map[ch] = true
+					return 'li data-ch=' + ch + '' + en + 'br' + cn + 'li'
+				}
+			}).join('')
+
+			var elItemList = document.querySelector('#item-container ul')
+			elItemList.innerHTML = html
+
+			return {
+				gotoChar function (ch) {
+					if (ch === '') {
+						elItemList.scrollTop = 0
+					} else if (ch === '#') {
+						elItemList.scrollTop = elItemList.scrollHeight
+					} else {
+						var target = elItemList.querySelector('[data-ch=' + ch + ']')
+						if (target) {
+							target.scrollIntoView()
+						}
+					}
+				}
+			}
+		}
+
+		app.main = function () {
+			var itemList = app.ItemList(app.data)
+			new IndexSidebar().on('charChange', itemList.gotoChar)
+		}
+
+		app.main()
+
+	script
+body
+
+html
